@@ -1,0 +1,28 @@
+
+<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd"
+    name="CodeNarc Maven Plugin">
+  <body>
+    <links>
+      <item name="CodeNarc" href="http://codenarc.sourceforge.net/"/>
+    </links>
+    <menu name="Mojo">
+      <item name="Back to Mojo" href="http://mojo.codehaus.org"/>
+    </menu>
+    <menu name="Previous Versions">
+      <item name="Version 0.17-1" href="http://mojo.codehaus.org/codenarc-maven-plugin-0.17-1/"/>
+      <item name="Back to Mojo" href="http://mojo.codehaus.org"/>
+      <item name="Current CodeNarc Mojo" href="http://mojo.codehaus.org/codenarc-maven-plugin"/>
+    </menu>
+    <menu name="Overview">
+      <item name="Introduction" href="index.html"/>
+      <item name="Goals" href="plugin-info.html"/>
+      <item name="Usage" href="usage.html"/>
+      <item name="FAQ" href="faq.html"/>
+    </menu>
+    <menu name="Examples">
+      <item name="Sample Report" href="examples/codenarc.html"/>
+    </menu>
+  </body>
+</project>

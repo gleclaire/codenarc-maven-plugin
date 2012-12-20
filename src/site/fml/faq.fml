@@ -1,0 +1,16 @@
+<faqs xmlns="http://maven.apache.org/FML/1.0.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/FML/1.0.1 http://maven.apache.org/xsd/fml-1.0.1.xsd"
+  id="FAQ" title="Frequently Asked Questions">
+ <part id="General">
+   <faq id="How do I use a different version of CodeNarc when doing a code review">
+     <question>How do I use a different version of CodeNarc when doing a code review?</question>
+       <answer>
+         <p>
+         See the 
+         <a href="usage.html#Use a Different version of CodeNarc">Usage Page</a>
+         </p>
+       </answer>
+     </faq>
+  </part>
+</faqs>

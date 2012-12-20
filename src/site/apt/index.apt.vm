@@ -1,0 +1,19 @@
+ ------
+ Introduction
+ ------
+ ------
+ ------
+
+CodeNarc Maven Plugin
+
+ The CodeNarc  project provides a static analysis tool and framework for analyzing Groovy source code.
+
+ CodeNarc scans Groovy source code, looking for violations of predefined or custom rules and generates an HTML report of the results. These rules include checks for coding standards, or searching for unused code, possible bugs or bad coding practices.
+ 
+ See a {{{./examples/codenarc.html}sample report}}.
+
+ To see more documentation about CodeNarc, please see the {{{http://codenarc.sourceforge.net}CodeNarc Site}}.  This version of the plugin uses CodeNarc ${codeNarcVersion}
+
+*Please Note
+
+ You must explicitly set the source directory in the <<<\<build\>>>> section of your <<<pom.xml>>>.
