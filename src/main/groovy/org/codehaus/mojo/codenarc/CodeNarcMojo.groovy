@@ -19,6 +19,8 @@ package org.codehaus.mojo.codenarc
  * under the License.
  */
 
+import java.util.List;
+
 import org.apache.maven.reporting.AbstractMavenReport
 import org.apache.maven.project.MavenProject
 import org.apache.maven.artifact.Artifact
@@ -182,6 +184,26 @@ class CodeNarcMojo extends AbstractMavenReport {
     File sourceDirectory
 
     /**
+     * The directories containing the sources to be compiled.
+     *
+     * @parameter expression="${project.compileSourceRoots}"
+     * @required
+     * @readonly
+     * @since 0.18-2
+     */
+    List compileSourceRoots
+
+    /**
+     * The directories containing the test-sources to be compiled.
+     *
+     * @parameter expression="${project.testCompileSourceRoots}"
+     * @required
+     * @readonly
+     * @since 0.18-2
+     */
+    List testSourceRoots
+
+    /**
      * Used to look up Artifacts in the remote repository.
      * 
      * @parameter expression="${component.org.apache.maven.artifact.factory.ArtifactFactory}"
@@ -261,7 +283,7 @@ log4j.appender.CONSOLE.layout.ConversionPattern=%d{ISO8601} %c{1} [%t] %p - %m%n
     /**
      * The CodeNarc version to use for the plugin
      *
-     * @parameter expression="${codenarc.codenarc.version}" default-value="0.17"
+     * @parameter expression="${codenarc.codenarc.version}" default-value="0.18"
      */
     String codeNarcVersion
 
