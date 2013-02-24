@@ -34,16 +34,16 @@
   </dependencies>
 
   <build>
-    <sourceDirectory>@testDirectory@</sourceDirectory>
-    <testSourceDirectory>@testDirectory@</testSourceDirectory>
+    <sourceDirectory>@integrationTestSrc@</sourceDirectory>
+    <testSourceDirectory>@integrationTestSrc@</testSourceDirectory>
     <resources>
       <resource>
-        <directory>@testDirectory@/resources</directory>
+        <directory>@integrationTestSrc@/resources</directory>
       </resource>
     </resources>
     <testResources>
       <testResource>
-        <directory>@testDirectory@/resources</directory>
+        <directory>@integrationTestSrc@/resources</directory>
       </testResource>
     </testResources>
     <pluginManagement>
