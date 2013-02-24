@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd ">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd ">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -9,7 +10,7 @@
   </parent>
 
   <artifactId>codenarc-maven-plugin</artifactId>
-  <version>0.18-2-SNAPSHOT</version>
+  <version>0.18.1-1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>CodeNarc Maven Plugin</name>
@@ -77,10 +78,15 @@
     <project.build.java.target>1.5</project.build.java.target>
     <projectVersion>${project.version}</projectVersion>
     <jxrPluginVersion>2.3</jxrPluginVersion>
-    <codeNarcVersion>0.18</codeNarcVersion>
+    <codeNarcVersion>0.18.1</codeNarcVersion>
     <groovyVersion>1.7.5</groovyVersion>
     <log4jVersion>1.2.13</log4jVersion>
     <testDirectory>${project.build.directory}/it-src-codenarc/test</testDirectory>
+    <integrationTestSrc>${project.build.directory}/it-src-codenarc/test</integrationTestSrc>
+    <localTestSrc>${user.dir}/FindBugs/findbugsTestCases/src</localTestSrc>
+    <remoteTestSrc>scm:svn:https://codenarc.svn.sourceforge.net/svnroot/codenarc/tags/0.17/src/test/</remoteTestSrc>
+    <includesTestSrcPattern>**/*</includesTestSrcPattern>
+    <testSrc>remote</testSrc>
   </properties>
 
   <dependencyManagement>
@@ -382,7 +388,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-invoker-plugin</artifactId>
-            <version>1.6-SNAPSHOT</version>
+            <version>1.5</version>
             <executions>
               <execution>
                 <id>integration-test</id>
