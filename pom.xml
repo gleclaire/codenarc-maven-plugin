@@ -85,7 +85,7 @@
     <integrationTestSrc>${project.build.directory}/it-src-codenarc/test</integrationTestSrc>
     <localTestSrc>${user.dir}/FindBugs/findbugsTestCases/src</localTestSrc>
     <remoteTestSrc>scm:svn:https://codenarc.svn.sourceforge.net/svnroot/codenarc/tags/0.17/src/test/</remoteTestSrc>
-    <includesTestSrcPattern>**/*</includesTestSrcPattern>
+    <includesTestSrcPattern>**/A*.java, **/Use*.java</includesTestSrcPattern>
     <testSrc>remote</testSrc>
   </properties>
 
@@ -344,7 +344,7 @@
       <id>find-it-src-export</id>
       <activation>
         <file>
-          <missing>${testDirectory}/groovy/org/codenarc/CodeNarcRunnerTest.groovy</missing>
+          <missing>${testDireintegrationTestSrcctory}/groovy/org/codenarc/CodeNarcRunnerTest.groovy</missing>
         </file>
       </activation>
       <build>
@@ -362,7 +362,7 @@
                 </goals>
                 <configuration>
                   <connectionUrl>scm:svn:https://codenarc.svn.sourceforge.net/svnroot/codenarc/tags/0.17/src/test/</connectionUrl>
-                  <exportDirectory>${testDirectory}</exportDirectory>
+                  <exportDirectory>${integrationTestSrc}</exportDirectory>
                   <providerImplementations>
                     <svn>javasvn</svn>
                   </providerImplementations>
