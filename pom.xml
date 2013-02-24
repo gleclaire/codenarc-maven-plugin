@@ -360,12 +360,12 @@
                   <goal>export</goal>
                 </goals>
                 <configuration>
-                  <connectionUrl>scm:svn:https://codenarc.svn.sourceforge.net/svnroot/codenarc/tags/0.17/src/test/</connectionUrl>
+                  <connectionUrl>${remoteTestSrc}</connectionUrl>
                   <exportDirectory>${integrationTestSrc}</exportDirectory>
                   <providerImplementations>
                     <svn>javasvn</svn>
                   </providerImplementations>
-                  <includes>**/*</includes>
+                  <includes>${includesTestSrcPattern}</includes>
                 </configuration>
               </execution>
             </executions>
