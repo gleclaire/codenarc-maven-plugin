@@ -19,6 +19,29 @@
   <artifactId>multi-source</artifactId>
   <name>multi-source</name>
   <packaging>jar</packaging>
+  <build>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <version>@buildHelperPluginVersion@</version>
+          <executions>
+          <execution>
+          <id>add-source</id>
+          <phase>generate-sources</phase>
+          <goals>
+          <goal>add-source</goal>
+          </goals>
+          <configuration>
+          <sources>
+          <source>../../../src/main/</source>
+          </sources>
+          </configuration>
+          </execution>
+          </executions>
+        </plugin>
+      </plugins>
+  </build>
   <reporting>
     <excludeDefaults>true</excludeDefaults>
     <plugins>
@@ -33,7 +56,6 @@
         <version>@pom.version@</version>
         <configuration>
           <rulesetfiles>rulesets/basic.xml,rulesets/imports.xml,rulesets/naming.xml,rulesets/groovyism.xml,rulesets/unused.xml</rulesetfiles>
-          <includes>../../../src/main/**/*.groovy,groovy/**/*.groovy</includes>
         </configuration>
       </plugin>
     </plugins>

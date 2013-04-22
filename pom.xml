@@ -384,7 +384,7 @@
         </plugins>
       </build>
     </profile>
-    
+
     <profile>
       <id>find-it-src-local</id>
       <activation>
@@ -471,7 +471,7 @@
       <id>maven-3</id>
       <activation>
         <file>
-          <!-- This employs that the basedir expression is only recognized 
+          <!-- This employs that the basedir expression is only recognized
             by Maven 3.x (see MNG-2363) -->
           <exists>${basedir}</exists>
         </file>

@@ -19,8 +19,8 @@ File codenarcHtml =  new File(basedir, 'target/site/codenarc.html')
 
 assert codenarcHtml.exists()
 
-File findbugXdoc = new File(basedir, 'target/CodeNarc.xml')
-assert findbugXdoc.exists()
+File codenarcXdoc = new File(basedir, 'target/CodeNarc.xml')
+assert codenarcXdoc.exists()
 
 
 def xmlSlurper = new XmlSlurper()
