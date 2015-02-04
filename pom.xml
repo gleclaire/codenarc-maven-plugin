@@ -75,6 +75,7 @@
     <gmavenVersion>1.4</gmavenVersion>
     <doxiaVersion>1.1.3</doxiaVersion>
     <sitePluginVersion>2.3</sitePluginVersion>
+    <buildHelperPluginVersion>1.8</buildHelperPluginVersion>
     <project.build.java.target>1.5</project.build.java.target>
     <projectVersion>${project.version}</projectVersion>
     <jxrPluginVersion>2.3</jxrPluginVersion>
