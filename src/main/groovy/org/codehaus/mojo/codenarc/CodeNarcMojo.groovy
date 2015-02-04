@@ -148,7 +148,7 @@ class CodeNarcMojo extends AbstractMavenReport {
   String rulesetfiles = "rulesets/basic.xml,rulesets/exceptions.xml,rulesets/imports.xml"
 
   /**
-   * TThe comma-separated list of Ant-style file patterns specifying files that must be included.
+   * The comma-separated list of Ant-style file patterns specifying files that must be included.
    *  See the <a href="http://codenarc.sourceforge.net/codenarc-command-line.html">CodeNarc Command-Line Parameters</a>
    *  for the default behavior.
    *
@@ -157,7 +157,7 @@ class CodeNarcMojo extends AbstractMavenReport {
   String includes
 
   /**
-   * TThe comma-separated list of Ant-style file patterns specifying files that must be excluded.
+   * The comma-separated list of Ant-style file patterns specifying files that must be excluded.
    *  See the <a href="http://codenarc.sourceforge.net/codenarc-command-line.html">CodeNarc Command-Line Parameters</a>
    *  for the default behavior.
    *
