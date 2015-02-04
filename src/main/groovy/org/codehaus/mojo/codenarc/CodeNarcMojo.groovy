@@ -444,7 +444,7 @@ log4j.appender.R.layout.ConversionPattern=%d{ISO8601} %c{1} [%t] %p - %m%n
       }
 
       if ( ( maxPriority2Violations > -1 ) && ( generator.totalPriority2Violations > maxPriority2Violations ) ) {
-        throw new MojoFailureException( "totalPriority1Violations exceeded threshold of ${maxPriority2Violations} errors with " + generator.totalPriority2Violations )
+        throw new MojoFailureException( "totalPriority2Violations exceeded threshold of ${maxPriority2Violations} errors with " + generator.totalPriority2Violations )
       }
 
       if ( ( maxPriority3Violations > -1 ) && ( generator.totalPriority3Violations > maxPriority3Violations ) ) {
