@@ -290,7 +290,7 @@ log4j.appender.R.layout.ConversionPattern=%d{ISO8601} %c{1} [%t] %p - %m%n
   /**
    * The CodeNarc version to use for the plugin
    *
-   * @parameter expression="${codenarc.codenarc.version}" default-value="0.18.1"
+   * @parameter expression="${codenarc.codenarc.version}" default-value="0.22"
    */
   String codeNarcVersion
 

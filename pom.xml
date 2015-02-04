@@ -10,7 +10,7 @@
   </parent>
 
   <artifactId>codenarc-maven-plugin</artifactId>
-  <version>0.18.1-1-SNAPSHOT</version>
+  <version>0.22-1-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>CodeNarc Maven Plugin</name>
@@ -79,7 +79,7 @@
     <project.build.java.target>1.5</project.build.java.target>
     <projectVersion>${project.version}</projectVersion>
     <jxrPluginVersion>2.3</jxrPluginVersion>
-    <codeNarcVersion>0.18.1</codeNarcVersion>
+    <codeNarcVersion>0.22</codeNarcVersion>
     <groovyVersion>1.7.5</groovyVersion>
     <log4jVersion>1.2.13</log4jVersion>
     <integrationTestSrc>${project.build.directory}/it-src-codenarc/test</integrationTestSrc>
