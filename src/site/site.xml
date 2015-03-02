@@ -1,20 +1,42 @@
-
 <project xmlns="http://maven.apache.org/DECORATION/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0 http://maven.apache.org/xsd/decoration-1.0.0.xsd"
-    name="CodeNarc Maven Plugin">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd"
+         name="CodeNarc Maven Plugin">
+
+  <!--
+    <bannerLeft>
+      <name>CodeNarc Logo</name>
+      <src>/images/logos/CodeNarcLogo_sm.png</src>
+      <alt>CodeNarc logo</alt>
+      <href>/index.html</href>
+    </bannerLeft>
+  -->
+
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.3.1</version>
+  </skin>
+
+  <custom>
+    <fluidoSkin>
+      <topBarEnabled>false</topBarEnabled>
+      <sideBarEnabled>true</sideBarEnabled>
+      <gitHub>
+        <projectId>gleclaire/codenarc-maven-plugin</projectId>
+        <ribbonOrientation>right</ribbonOrientation>
+        <ribbonColor>red</ribbonColor>
+      </gitHub>
+      <!--<googleSearch />-->
+      <!--<facebookLike />-->
+      <!--<googlePlusOne />-->
+      <ohloh>
+        <projectId>codenarc-maven-plugin</projectId>
+        <widget>thin-badge</widget>
+      </ohloh>
+    </fluidoSkin>
+  </custom>
+
   <body>
-    <links>
-      <item name="CodeNarc" href="http://codenarc.sourceforge.net/"/>
-    </links>
-    <menu name="Mojo">
-      <item name="Back to Mojo" href="http://mojo.codehaus.org"/>
-    </menu>
-    <menu name="Previous Versions">
-      <item name="Version 0.17-1" href="http://mojo.codehaus.org/codenarc-maven-plugin-0.17-1/"/>
-      <item name="Back to Mojo" href="http://mojo.codehaus.org"/>
-      <item name="Current CodeNarc Mojo" href="http://mojo.codehaus.org/codenarc-maven-plugin"/>
-    </menu>
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
       <item name="Goals" href="plugin-info.html"/>
@@ -24,5 +46,8 @@
     <menu name="Examples">
       <item name="Sample Report" href="examples/codenarc.html"/>
     </menu>
+    <menu ref="reports" />
+
   </body>
 </project>
+

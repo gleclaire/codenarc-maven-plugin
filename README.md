@@ -1,9 +1,9 @@
+# **Note:**  CodeHaus is being taken off-line so check back for any changes affecting this plugin.
+
 codenarc-maven-plugin
 =====================
 
 Maven Mojo Plug-In to generate reports based on the CodeNarc Analyzer
-
-The documentation for the **CodeNarc Maven Plugin** is here: http://mojo.codehaus.org/codenarc-maven-plugin/
 
 Run all test
 mvn -Prun-its clean install
