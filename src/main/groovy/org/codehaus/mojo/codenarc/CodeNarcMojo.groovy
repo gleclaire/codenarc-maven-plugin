@@ -385,9 +385,9 @@ log4j.appender.R.layout.ConversionPattern=%d{ISO8601} %c{1} [%t] %p - %m%n
     ant.java( classname: "org.codenarc.CodeNarc", classpathref: "codenarc.classpath", fork: "true", failonerror: "false", clonevm: "false", maxmemory: "${maxHeap}m" ) {
 
       log.debug( "log4jConfigFile => ${log4jConfigFile}" )
-      sysproperty( key: "log4j.configuration", value: "${log4jConfigFile}" )
+      sysproperty( key: "log4j.configuration", value: "${cleanPath(log4jConfigFile)}" )
 
-      def antBasedir = "-basedir=${sourceDirectory}"
+      def antBasedir = "-basedir=${cleanPath(sourceDirectory)}"
       log.debug( "antBasedir => ${antBasedir}" )
       arg( value: antBasedir )
 
@@ -399,18 +399,18 @@ log4j.appender.R.layout.ConversionPattern=%d{ISO8601} %c{1} [%t] %p - %m%n
       log.debug( "antReport => ${antReport}" )
       arg( value: antReport )
 
-      def antRuleSets = "-rulesetfiles=" + rulesetfiles
+      def antRuleSets = "-rulesetfiles=" + cleanPath(rulesetfiles)
       log.debug( "antRuleSets => ${antRuleSets}" )
       arg( value: antRuleSets )
 
       if ( includes ) {
-        def antIncludes = "-includes=" + includes
+        def antIncludes = "-includes=" + cleanPath(includes)
         log.debug( "antIncludes => ${antIncludes}" )
         arg( value: antIncludes )
       }
 
       if ( excludes ) {
-        def antExcludes = "-excludes=" + excludes
+        def antExcludes = "-excludes=" + cleanPath(excludes)
         log.debug( "antExcludes => ${antExcludes}" )
         arg( value: antExcludes )
       }
@@ -540,4 +540,16 @@ log4j.appender.R.layout.ConversionPattern=%d{ISO8601} %c{1} [%t] %p - %m%n
 
     return bundle
   }
+
+  protected String cleanPath(File filePathToClean){
+    if (!filePathToClean){
+      return null
+    }
+    cleanPath(filePathToClean.path)
+  }
+
+  protected String cleanPath(String pathToClean){
+    pathToClean?.replace('\\','/')
+  }
+
 }
