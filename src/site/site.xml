@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/DECORATION/1.0.0"
+<project xmlns="http://maven.apache.org/DECORATION/1.3.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd"
          name="CodeNarc Maven Plugin">
 
@@ -11,6 +11,13 @@
     </bannerLeft>
   -->
 
+  <bannerLeft>
+    <name>CodeNarc Maven Plugin</name>
+  </bannerLeft>
+  <bannerRight>
+    <name></name>
+  </bannerRight>
+
   <skin>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-fluido-skin</artifactId>
@@ -21,6 +28,7 @@
     <fluidoSkin>
       <topBarEnabled>false</topBarEnabled>
       <sideBarEnabled>true</sideBarEnabled>
+      <breadcrumbDivider>»</breadcrumbDivider>
       <gitHub>
         <projectId>gleclaire/codenarc-maven-plugin</projectId>
         <ribbonOrientation>right</ribbonOrientation>
@@ -36,7 +44,17 @@
     </fluidoSkin>
   </custom>
 
+  <publishDate format="yyyy-MM-dd" position="right"/>
+  <version position="right"/>
+
   <body>
+    <links>
+      <item name="CodeNarc" href="http://codenarc.sourceforge.net/"/>
+    </links>
+    <breadcrumbs>
+      <item name="CodeNarc Maven Plugin" href="index.html"/>
+    </breadcrumbs>
+
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
       <item name="Goals" href="plugin-info.html"/>
