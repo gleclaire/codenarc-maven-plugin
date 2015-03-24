@@ -85,11 +85,14 @@
     <localTestSrc>${user.dir}/CodeNarc/CodeNarcTestCases/src</localTestSrc>
     <remoteTestSrc>scm:svn:https://codenarc.svn.sourceforge.net/svnroot/codenarc/tags/0.17/src/test/</remoteTestSrc>
     <includesTestSrcPattern>**/*</includesTestSrcPattern>
+
     <testSrc>remote</testSrc>
     <pmd.skip>true</pmd.skip>
     <cpd.skip>true</cpd.skip>
     <checkstyle.skip>true</checkstyle.skip>
     <skipSurefireReport>true</skipSurefireReport>
+    <relativizeDecorationLinks>true</relativizeDecorationLinks>
+
   </properties>
 
   <dependencyManagement>

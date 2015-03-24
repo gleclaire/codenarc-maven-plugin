@@ -29,6 +29,7 @@
       <topBarEnabled>false</topBarEnabled>
       <sideBarEnabled>true</sideBarEnabled>
       <breadcrumbDivider>»</breadcrumbDivider>
+      <breadcrumbs>false</breadcrumbs>
       <gitHub>
         <projectId>gleclaire/codenarc-maven-plugin</projectId>
         <ribbonOrientation>right</ribbonOrientation>
@@ -44,17 +45,19 @@
     </fluidoSkin>
   </custom>
 
-  <publishDate format="yyyy-MM-dd" position="right"/>
-  <version position="right"/>
+  <publishDate format="yyyy-MM-dd" position="left"/>
+  <version position="left"/>
 
   <body>
     <links>
       <item name="CodeNarc" href="http://codenarc.sourceforge.net/"/>
     </links>
+
+<!--
     <breadcrumbs>
       <item name="CodeNarc Maven Plugin" href="index.html"/>
     </breadcrumbs>
-
+-->
     <menu name="Overview">
       <item name="Introduction" href="index.html"/>
       <item name="Goals" href="plugin-info.html"/>
